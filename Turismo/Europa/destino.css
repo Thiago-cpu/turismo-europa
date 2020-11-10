@@ -1,0 +1,22 @@
+html, body{
+    height: 100%;
+}
+.card-text{
+    font-size: 13px;
+    
+}
+
+.input-group{
+    margin-top:5%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.form-control:focus{
+    outline:none;
+    box-shadow:none;
+    border-color:inherit;
+}
