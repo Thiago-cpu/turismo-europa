@@ -5,9 +5,10 @@ html, body{
     font-size: 13px;
     
 }
-
+.card:hover{
+    border: solid 2px green;
+}
 .input-group{
-    margin-top:5%;
     margin-right: auto;
     margin-left: auto;
 }

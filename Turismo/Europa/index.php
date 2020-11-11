@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="destino.css">
 </head>
 <body>
-
+<h1 style="position: relative; text-align: center;">Escoja un destino</h1>
 <div class="input-group mb-3" style="width: 20%;">
   <input type="text" class="form-control" oninput='enter(event)' id='bus' autofocus placeholder="Buscar..." >
   <div class="input-group-append">
     <button class="btn btn-outline-secondary" type="button" id="button-addon2">buscar</button>
   </div>
 </div>
+
 
 <div class="row row-cols-1 row-cols-md-3">
 
@@ -50,7 +51,7 @@ echo "const lugares = $json;";
 
 function enter(e){
     const input = e.target.value.toLowerCase()
-    const lugaresFiltrados = lugares.filter(lugar => reemplazarAcentos(lugar[0].toLowerCase()).includes(input))
+    const lugaresFiltrados = lugares.filter(lugar => reemplazarAcentos(lugar[0].toLowerCase()).includes(reemplazarAcentos(input)))
     mostrarlugares(lugaresFiltrados)
     !lugaresFiltrados.length ? e.target.style = 'border-color:red' :  e.target.style = ''
 }
