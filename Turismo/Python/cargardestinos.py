@@ -31,7 +31,7 @@ try:
             desc = card.find_element_by_css_selector(".GmOjKf div:nth-of-type(1)")
             print(h2.text +', ' + desc.text + ', ' + imgsrc)
             try:
-                mycursor.execute(f'INSERT INTO destinos (destinos.nombre, destinos.des, destinos.src) VALUES ("{h2.text}","{desc.text}","{imgsrc}")')
+                mycursor.execute(f'UPDATE destinos  SET destinos.src = "{imgsrc}" where destinos.nombre = "{h2.text}"')
                 mydb.commit()
             except:
                 print('error')

@@ -40,16 +40,16 @@ for x in myresult:
         y = 0
         cards = bus.find_elements_by_css_selector('.Ld2paf')
         for card in cards:
-            y += 300
+            y += 900
             nombre = card.get_attribute("data-title")
             des = card.find_element_by_class_name('nFoFM').text
             driver.execute_script(f"window.scrollTo(0, {y});")
             img = card.find_element_by_tag_name('img').get_attribute('src')
-            # try:
-            #     mycursor.execute(f'INSERT INTO atrac VALUES (DEFAULT,"{x[0]}","{nombre}","{des}","{img}")')
-            #     mydb.commit()
-            # except:
-            #     print('error')
+            try:
+                mycursor.execute(f'UPDATE atrac SET atrac.src = "{img}" where atrac.nombre = "{nombre}"')
+                mydb.commit()
+            except:
+                print('error')
             
         driver.back()
 
