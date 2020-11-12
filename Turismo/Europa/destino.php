@@ -11,12 +11,15 @@
 html, body{
     height: 100%;
 }
+.card{
+    cursor: pointer;
+}
 .card-text{
     font-size: 13px;
     
 }
 .card:hover{
-    border: solid 2px green;
+    border: solid 3px green;
 }
 .input-group{
     margin-left: 20%;
@@ -36,6 +39,9 @@ html, body{
     }
 </style>
 <body>
+<h1 style="position: relative; text-align: center; width:60%; display: none;" id="cardetitle">Lugares escogidos</h1>
+<div class="row row-cols-1 row-cols-md-3" id="lugaresescogidos">
+</div>
 <h1 style="position: relative; text-align: center; width:60%;">Escoja lugares que desee visitar</h1>
 <div class="input-group mb-3" style="width: 20%;">
   <input type="text" class="form-control" oninput='enter(event)' id='bus' autofocus placeholder="Buscar..." >
@@ -43,7 +49,7 @@ html, body{
     <button class="btn btn-outline-secondary" type="button" id="button-addon2">buscar</button>
   </div>
 </div>
-<div class="row row-cols-1 row-cols-md-3">
+<div class="row row-cols-1 row-cols-md-3" id="lugares">
 
 <?php
 $url = $_SERVER['REQUEST_URI'];
@@ -72,21 +78,47 @@ echo "const lugares = $json;";
 
 
 ?>
-
+const mostrarlugaresescogidos= (lugaresescogidos,grid) =>{
+    document.getElementById('cardetitle').style.display = ''
+    const container = document.querySelector(`#${grid}`)
+    container.innerHTML = ''
+    lugaresescogidos.map(lugar => {
+        container.innerHTML += `
+        <div class='col mb-4' onclick=''  id='cardE-${lugar.id.substring(5)}'>
+        <div class='card' style='border: solid 5px green' onclick='select(${lugar.id.substring(5)})'>
+        <img src='${lugar.querySelector('img').src}' alt='${lugar.querySelector('img').alt}' class='card-img-top'>
+        <div class='card-body'>
+        <h2>${lugar.querySelector('img').alt}</h2>
+        <p class='card-text'>${lugar.querySelector('p').textContent}</p>
+        </div>
+        </div>
+        </div>
+        `
+    })
+    
+    container.innerHTML += "</div>"
+}
 function enter(e){
     const input = e.target.value.toLowerCase()
-    console.log(input)
-    const lugaresFiltrados = lugares.filter(lugar => reemplazarAcentos(lugar[2].toLowerCase()).includes(reemplazarAcentos(input)))
-    mostrarlugares(lugaresFiltrados)
-    !lugaresFiltrados.length ? e.target.style = 'border-color:red' :  e.target.style = ''
+    cont = 0;
+    lugares.forEach(element => {
+        if (!reemplazarAcentos(element[2].toLowerCase()).includes(reemplazarAcentos(input))){
+            document.getElementById(`card-${element[0]}`).style.display = "none";
+            cont += 1
+        } else {
+            document.getElementById(`card-${element[0]}`).style.display = "";
+            cont -= 1
+        }
+    });
+    cont == lugares.length ? e.target.style = 'border-color:red' :  e.target.style = ''
 }
-const mostrarlugares= (lugares) =>{
-    const container = document.querySelector('.row-cols-md-3')
+const mostrarlugares= (lugares,grid) =>{
+    const container = document.querySelector(`#${grid}`)
     container.innerHTML = ''
     lugares.map(lugar => {
         container.innerHTML += `
-        <div class='col mb-4' onclick=''>
-        <div class='card' id='card-${lugar[0]}'>
+        <div class='col mb-4' onclick=''  id='card-${lugar[0]}'>
+        <div class='card' onclick='select(${lugar[0]})'>
         <img src='${lugar[4]}' alt='${lugar[2]}' class='card-img-top'>
         <div class='card-body'>
         <h2>${lugar[2]}</h2>
@@ -99,7 +131,22 @@ const mostrarlugares= (lugares) =>{
     
     container.innerHTML += "</div>"
 }
-mostrarlugares(lugares)
+mostrarlugares(lugares, 'lugares')
+atracselect = [];
+var select = function (id){
+    col = document.querySelector(`#card-${id}`)
+    card = document.querySelector(`#card-${id} > .card`)
+    if (!atracselect.includes(col)){
+        card.style.border = "solid 5px green"
+        atracselect.push(document.getElementById(`card-${id}`))
+    }else {
+        atracselect = atracselect.filter(titulo => titulo != col)
+        card.style.border = ""
+
+    }
+    mostrarlugaresescogidos(atracselect, 'lugaresescogidos')
+    console.log(atracselect)
+}
 
 var reemplazarAcentos=function(cadena)
 {
