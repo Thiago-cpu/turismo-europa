@@ -431,3 +431,4 @@
 [1112/163103.450:ERROR:exception_snapshot_win.cc(99)] thread ID 6120 not found in process
 [1112/163103.458:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
 [1112/163103.458:ERROR:exception_snapshot_win.cc(99)] thread ID 2492 not found in process
+[1112/164354.608:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)
