@@ -432,3 +432,46 @@
 [1112/163103.458:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
 [1112/163103.458:ERROR:exception_snapshot_win.cc(99)] thread ID 2492 not found in process
 [1112/164354.608:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)
+[1112/165426.139:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[1112/165426.139:ERROR:exception_snapshot_win.cc(99)] thread ID 15616 not found in process
+[1112/165426.147:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[1112/165426.147:ERROR:exception_snapshot_win.cc(99)] thread ID 12452 not found in process
+[1112/170525.066:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)
+[1112/183832.058:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)
+[1112/184011.169:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[1112/184011.169:ERROR:exception_snapshot_win.cc(99)] thread ID 6600 not found in process
+[1112/184011.190:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[1112/184011.190:ERROR:exception_snapshot_win.cc(99)] thread ID 12292 not found in process
+[1112/190105.652:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)
+[1112/210147.913:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[1112/210147.913:ERROR:exception_snapshot_win.cc(99)] thread ID 14332 not found in process
+[1112/210147.935:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[1112/210147.935:ERROR:exception_snapshot_win.cc(99)] thread ID 13912 not found in process
+[1112/211316.442:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[1112/211316.442:ERROR:exception_snapshot_win.cc(99)] thread ID 9764 not found in process
+[1112/211316.465:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[1112/211316.465:ERROR:exception_snapshot_win.cc(99)] thread ID 13452 not found in process
+[1112/211716.464:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[1112/211716.465:ERROR:exception_snapshot_win.cc(99)] thread ID 4092 not found in process
+[1112/211716.490:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[1112/211716.490:ERROR:exception_snapshot_win.cc(99)] thread ID 1608 not found in process
+[1112/212304.033:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[1112/212304.034:ERROR:exception_snapshot_win.cc(99)] thread ID 6432 not found in process
+[1112/212304.059:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[1112/212304.059:ERROR:exception_snapshot_win.cc(99)] thread ID 9240 not found in process
+[1112/213452.197:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[1112/213452.198:ERROR:exception_snapshot_win.cc(99)] thread ID 6252 not found in process
+[1112/213452.200:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[1112/213452.201:ERROR:exception_snapshot_win.cc(99)] thread ID 11984 not found in process
+[1112/213452.210:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[1112/213452.210:ERROR:exception_snapshot_win.cc(99)] thread ID 13960 not found in process
+[1112/213452.211:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[1112/213452.211:ERROR:exception_snapshot_win.cc(99)] thread ID 9156 not found in process
+[1112/215510.617:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[1112/215510.617:ERROR:exception_snapshot_win.cc(99)] thread ID 1684 not found in process
+[1112/215510.640:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[1112/215510.640:ERROR:exception_snapshot_win.cc(99)] thread ID 904 not found in process
+[1112/215510.666:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[1112/215510.667:ERROR:exception_snapshot_win.cc(99)] thread ID 15000 not found in process
+[1112/215510.689:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[1112/215510.689:ERROR:exception_snapshot_win.cc(99)] thread ID 15468 not found in process

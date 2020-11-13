@@ -33,24 +33,14 @@ html, body{
     border-color:inherit;
 }
 
-    .card-img-top{
+.card-img-top{
         height: 20vh;
         object-fit: cover;
-    }
+}
 </style>
+
 <body>
 <h1 style="position: relative; text-align: center; width:60%; display: none;" id="cardetitle">Lugares escogidos</h1>
-<div class="row row-cols-1 row-cols-md-3" id="lugaresescogidos">
-</div>
-<h1 style="position: relative; text-align: center; width:60%;">Escoja lugares que desee visitar</h1>
-<div class="input-group mb-3" style="width: 20%;">
-  <input type="text" class="form-control" oninput='enter(event)' id='bus' autofocus placeholder="Buscar..." >
-  <div class="input-group-append">
-    <button class="btn btn-outline-secondary" type="button" id="button-addon2">buscar</button>
-  </div>
-</div>
-<div class="row row-cols-1 row-cols-md-3" id="lugares">
-
 <?php
 $url = $_SERVER['REQUEST_URI'];
 $url_components = parse_url($url); 
@@ -59,6 +49,25 @@ parse_str($url_components['query'], $params);
 }
 if (isset($params['id'])){
 $id = $params['id'];
+echo "<form action='hoteles.php?id=$id' method='POST'>";
+?>
+
+<div class="row row-cols-1 row-cols-md-3" id="lugaresescogidos">
+</div>
+<button type="submit">Enviar</button>
+</form>
+<h1 style="position: relative; text-align: center; width:60%;">Escoja lugares que desee visitar</h1>
+<div class="input-group mb-3" style="width: 20%;">
+  <input type="text" class="form-control" oninput='enter(event)' id='bus' autofocus placeholder="Buscar..." >
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button" id="button-addon2">buscar</button>
+  </div>
+</div>
+<div class="row row-cols-1 row-cols-md-3" id="lugares">
+    
+
+<?php
+
 
 require_once ("../src/conect.php");
 
@@ -84,7 +93,8 @@ const mostrarlugaresescogidos= (lugaresescogidos,grid) =>{
     container.innerHTML = ''
     lugaresescogidos.map(lugar => {
         container.innerHTML += `
-        <div class='col mb-4' onclick=''  id='cardE-${lugar.id.substring(5)}'>
+        <div class='col mb-4' value = '${lugar.id.substring(5)}'  id='cardE-${lugar.id.substring(5)}'>
+        <input type="hidden" name = 'atrac-${lugar.id.substring(5)}' value = '${lugar.id.substring(5)}'>
         <div class='card' style='border: solid 5px green' onclick='select(${lugar.id.substring(5)})'>
         <img src='${lugar.querySelector('img').src}' alt='${lugar.querySelector('img').alt}' class='card-img-top'>
         <div class='card-body'>

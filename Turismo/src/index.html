@@ -11,22 +11,19 @@
 
 <script>
     // promedio de las distancias
-    let a = [20, 45]
-    let b = [32, 56]
-    let c = [102, 144]
-    let d = [65, 23]
-    let atracciones = [a,b,c,d]
-    let h1 = [123, 123]
-    let h2 = [102, 33]
-    let h3 = [112, 39]
-    let dist = 0;
-    let x = 0
-    for(let i = 0; i<atracciones.length; i++){
-        dist += Math.sqrt(Math.abs(atracciones[i][0] - h1[0]) + Math.abs(atracciones[i][1] - h1[1]))
-        
+    debugger;
+    let a = [[20, 15],[2, 17],[45, 32],[14, 32],[75, 34],[2, 45]]
+    for (let x = 0; x < a.length; x++) {
+        for (let i = 0; i < a.length-x -1; i++) {
+            if(a[i][0] > a[i+1][0]){
+                let tmp = [a[i+1][0], a[i+1][1]];
+                a[i+1][0] = a[i][0];
+                a[i+1][1] = a[i][1];
+                a[i][0] = tmp[0];
+                a[i][1] = tmp[1]
+            }
+        }
     }
-
-    console.log(dist/atracciones.length)
 </script>
 
 </body>
