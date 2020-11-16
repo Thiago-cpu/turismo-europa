@@ -40,6 +40,7 @@ html, body{
 </style>
 
 <body>
+    <a href="index.php">Regresar</a>
 <h1 style="position: relative; text-align: center; width:60%; display: none;" id="cardetitle">Lugares escogidos</h1>
 <?php
 $url = $_SERVER['REQUEST_URI'];

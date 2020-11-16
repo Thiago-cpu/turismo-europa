@@ -24,7 +24,7 @@
         .card{
             margin: 0.2%;
         }
-        a{
+        .link{
             color: black;
             text-decoration: none;
         }
@@ -34,6 +34,18 @@
         }
     
     </style>
+    <?php
+            $url = $_SERVER['REQUEST_URI'];
+            $url_components = parse_url($url); 
+            if (isset($url_components['query'])){
+                parse_str($url_components['query'], $params);
+            }
+            if (isset($params['id'])){
+                $id = $params['id'];
+                echo " <a href='destino.php?id=$id'>regresar</a>";
+            }
+    ?>
+   
     <div class="row row-cols-1 row-cols-md-3">
     <?php
         require_once ("../src/conect.php");
@@ -105,7 +117,7 @@
                             $lugar = $hoteles[$llave][5];
                             $estrellas = $hoteles[$llave][3];
                             echo "<div class='card mb-4' style='max-width: 540px;'>
-                            <a href='$link'>
+                            <a class='link' href='$link'>
                             <div class='row no-gutters'>
                               <div class='col-md-4'>
                                 <img src=$src class='card-img' alt='...'>
